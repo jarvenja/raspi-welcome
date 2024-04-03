@@ -9,7 +9,8 @@ checkTemp () {
 	temp=$(vcgencmd measure_temp 2>/dev/null)
  	if [ -n "$temp" ]; then
 		number="${temp:5:-2}"
-		if (( $(echo "$number > 65.0" | bc -l) )); then temp+=" is hot!"
+		if [ -z $(command -v "bc") ]; then temp+=" (bc required for comparison)"
+		elif (( $(echo "$number > 65.0" | bc -l) )); then temp+=" is hot!"
 		elif (( $(echo "$number > 40.0" | bc -l) )); then temp+=" is warm."
 		else temp+=" is fine."
 		fi
@@ -64,11 +65,9 @@ getShellType () {
 	echo "${x##* }"
 }
 
-
-# This kind of script should be quick but informative
 ensureBash
 displayArt
-displayCmdStatus "bc" "curl" "gcc" "java" "jq" "ncal" "python3" "tree"
+displayCmdStatus "bc" "curl" "gcc" "java" "python3" "tree" # <- list your mix here...
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
 printf "Its $(date)\n"
 echo "Screen size: $(tput cols) x $(tput lines)"
