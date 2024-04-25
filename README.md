@@ -38,7 +38,7 @@ The script is tested on Raspberry Pi Model B Rev 2. Here is what it looks like:
 
 ### Linux Mint
 
-The script works also on most Linux-gnu versions. Here is what it looks like on Linux Mint:
+The script works also on most Linux distros and versions. Here is what it looks like on Linux Mint:
 
 ![Welcome Mint](snapshots/welcome-mint.png?raw=true "Running welcome.sh on Linux Mint 21.3")
 
