@@ -1,10 +1,12 @@
 # raspi-welcome
 
-This (welcome.sh) is my default welcome message especially for Raspberry Pi devices. The script provides useful information and can help prevent confusion or misremembering some things when using multiple similar devices. It also shows the temperature in Raspberry Pi devices, which can unexpectedly rise when the load is increased, for example due to the wrong type of case.
+A "welcome script" typically refers to a script or program that is automatically executed when a user logs into a computer system or a specific user account. Its purpose is to provide a personal or informative welcome message, define the user environment or perform other tasks to improve the user experience.
 
-## Routines
+This script (welcome.sh) tries to provide the user with a basic set of information about a Linux-based server, especially Raspberry Pi devices, when they are in the "construction phase". It helps prevent confusion or misremembering some things when working with many devices of the same type. It shows, for example, the temperature of the Raspberry Pi device, which can unexpectedly rise when the load is increased, for example due to insufficient cooling of the case.
 
-The script contains the following routines:
+## Functions
+
+The welcome script includes the following functions:
 - checks internet connection when connected locally
 - displays CPU temperature (Raspberry OS only)
 - displays CPU architecture
@@ -23,19 +25,23 @@ The script contains the following routines:
 
 ### Parameters
 
-To customize the default ASCII art just provide some text file path as only parameter.
+To change the default ASCII art into your own just provide the correct path to text file as only parameter.
 
 ><><>< raspi-welcome v0.2 beta
 usage: welcome.sh ascii-art-file
 
 ### Raspberry OSes
 
-The script is tested on Raspberry Pi Model B Rev 2.
+The script is tested on Raspberry Pi Model B Rev 2. Here is what it looks like:
 
-(image)
+![Welcome RPi](snapshots/welcome-rpi.png?raw=true "Running welcome.sh on Raspberry Pi")
 
 ### Linux Mint
 
-The script works also on most other Linux-gnu distros. Since supported commands varies a little the result information is also a bit different.
+The script works also on most Linux-gnu versions. Here is what it looks like on Linux Mint:
 
-(image)
+![Welcome Mint](snapshots/welcome-mint.png?raw=true "Running welcome.sh on Linux Mint 21.3")
+
+Since supported commands varies a little the provided information differs.
+
+Thats it. You welcome!
