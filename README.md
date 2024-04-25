@@ -2,7 +2,7 @@
 
 A "welcome script" typically refers to a script or program that is automatically executed when a user logs into a computer system or a specific user account. Its purpose is to provide a personal or informative welcome message, define the user environment or perform other tasks to improve the user experience.
 
-This script (welcome.sh) tries to provide the user with a basic set of information about a Linux-based server, especially Raspberry Pi devices, when they are in the "construction phase". It helps prevent confusion or misremembering some things when working with many devices of the same type. It shows, for example, the temperature of the Raspberry Pi device, which can unexpectedly rise when the load is increased, for example due to insufficient cooling of the case.
+This script (welcome.sh) tries to provide the user with the most fundamental set of information about a Linux-based device, such as Raspberry Pi, when they are in the "construction phase" and therefore prevent confusion or misremembering some things when working with many similar devices. The script shows, for example, the temperature of the Raspberry Pi device, which can unexpectedly rise when the load is increased, for example due to insufficient cooling of the case.
 
 ## Functions
 
@@ -38,7 +38,7 @@ The script is tested on Raspberry Pi Model B Rev 2. Here is what it looks like:
 
 ### Linux Mint
 
-The script works also on most Linux distros and versions. Here is what it looks like on Linux Mint:
+The script may also work on most Linux distros and versions, but it has not been tested yet. Here is what it looks like on Linux Mint:
 
 ![Welcome Mint](snapshots/welcome-mint.png?raw=true "Running welcome.sh on Linux Mint 21.3")
 
